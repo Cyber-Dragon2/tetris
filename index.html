@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <script src="./app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Retro Tetris</title>
+</head>
+
+<body>
+    <h5>Developed by: Amritpal Singh</h5>
+    <h1>Tetris<br>Game!</h1>
+    <h2 id="displayScore">Score: <span id="score">0</span></h2>
+    <div id="controls">
+        <button class="button" id="startButton">Start / Pause</button><br>
+        <button class="button" id="newGameButton">New Game</button>
+    </div>
+    <div class="container">
+        <div id="mainGrid"></div>
+        <div id="miniGrid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <h1 id="gameOver" class="hide">Game Over</h1>
+    <script>
+        for (let index = 0; index < 210; index++) {
+            document.getElementById("mainGrid").innerHTML += "<div></div>"
+
+        }
+        const box = Array.from(document.querySelectorAll("#mainGrid div"));
+        for (let index = 200; index < 210; index++) {
+            box[index].classList.add("taken");
+        }
+    </script>
+</body>
+
+</html>

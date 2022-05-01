@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-270deg, rgb(193, 193, 221), rgb(167, 158, 155));
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#mainGrid {
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(250deg, rgb(193, 193, 221), rgb(167, 158, 155));
+    /* background-color: rgb(172, 172, 172); */
+    width: 200px;
+    /* 10*20 */
+    height: 400px;
+    /* 20*20 */
+}
+
+#mainGrid div {
+    width: 20px;
+    height: 20px;
+}
+
+.piece {
+    background-color: orangered;
+}
+
+#miniGrid {
+    margin-top: 30px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(250deg, rgb(193, 193, 221), rgb(167, 158, 155));
+}
+
+#miniGrid div {
+    width: 20px;
+    height: 20px;
+}
+
+.container {
+    margin-left: 25%;
+    padding-top: 10%;
+    display: flex;
+    width: 320px;
+    justify-content: space-between;
+}
+
+.hide {
+    opacity: 0;
+}
+
+#gameOver {
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    color: white;
+    font-size: 5rem;
+    left: -50px;
+    top: 150px;
+}
+
+.button {
+    font-size: large;
+    width: 8rem;
+    height: 2rem;
+    border: 2px solid black;
+    border-radius: 30px;
+    background-color: transparent;
+    transition: 1s;
+}
+
+.button:hover {
+    background-color: black;
+    color: white;
+}
+
+#controls {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    left: 45%;
+    top: 50%;
+}
+
+#displayScore {
+    position: absolute;
+    color: white;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 3rem;
+    margin-top: 3%;
+    margin-left: 13%;
+}
+
+h5 {
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: right;
+    color: white;
+    margin-bottom: 0;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    ;
+    position: absolute;
+    text-align: center;
+    background: linear-gradient(to right, #f32170, #ff6b08,
+            #cf23cf, #eedd44);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    right: 5px;
+    font-size: 4rem;
+    margin-bottom: 0;
+    margin-top: 100px;
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 1028px) {
+    body {
+        background-color: lightgreen;
+    }
+
+    #controls {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        left: 30%;
+        top: 80%;
+    }
+
+    .container {
+        margin-left: 25%;
+        padding-top: 13%;
+        display: flex;
+        width: 320px;
+        justify-content: space-between;
+    }
+}
